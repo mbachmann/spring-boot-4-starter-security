@@ -1,8 +1,8 @@
 # Spring Boot 4.0.6 + Java 25 + JPA + Auth JWT
 
-- Backend:  https://github.com/mbachmann/spring-boot-4-starter-security.git
-- Frontend: https://github.com/mbachmann/angular-20-jwt-auth-starter-standalone.git
-- Frontend (deprecated): https://github.com/mbachmann/angular-17-jwt-auth-starter-no-standalone.git
+- Backend: (Spring Boot 4.0.x) https://github.com/mbachmann/spring-boot-4-starter-security.git
+- Backend: (Spring Boot 3.5.x)  https://github.com/mbachmann/spring-boot-3-starter-security.git
+- Frontend (angular 21): https://github.com/mbachmann/angular-21-jwt-auth-starter.git
 
 The back-end server uses Spring Boot with Spring Security for JWT Authentication & Role based Authorization, 
 Spring Data JPA for interacting with database. 
