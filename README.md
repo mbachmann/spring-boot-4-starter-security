@@ -112,7 +112,6 @@ Start with log output in the console:
 
 ```
 $  docker compose -f docker-compose-h2.yml up
-$  docker compose -f docker-compose-postgres.yml up
 ```
 
 <br/>
@@ -121,7 +120,6 @@ Start in detached mode
 
 ```
 $  docker compose -f docker-compose-h2.yml up -d
-$  docker compose -f docker-compose-postgres.yml up -d
 ```
 
 <br/>
@@ -130,7 +128,6 @@ Delete containers:
 
 ```
 $  docker-compose -f docker-compose-h2.yml rm
-$  docker-compose -f docker-compose-postgres.yml rm
 ```
 
 <br/>
