@@ -1,6 +1,7 @@
 
 package com.example.starter.config;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -15,6 +16,7 @@ import java.util.List;
  * and reject it.
  */
 @Configuration
+@Slf4j
 public class CorsConfig {
 
     @Value("${endpoints.web.cors.path-mappings}")
@@ -49,6 +51,13 @@ public class CorsConfig {
         config.setAllowCredentials(true);
         config.setMaxAge(60L);
         source.registerCorsConfiguration(pathMappings, config);
+        log.info("CORS config loaded: pathMappings={}, allowedOrigins={}, allowedMethods={}, allowedHeaders={}, allowCredentials={}, maxAge={}s",
+            pathMappings,
+            allowedOrigins,
+            allowedMethods,
+            allowedHeaders,
+            config.getAllowCredentials(),
+            config.getMaxAge());
         return new CorsFilter(source);
     }
 }

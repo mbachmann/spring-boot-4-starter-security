@@ -1,7 +1,7 @@
 #
 # Build stage
 #
-FROM maven:3.8.5-openjdk-17 AS build
+FROM maven:3.9.11-eclipse-temurin-25 AS build
 ENV HOME=/usr/app
 RUN mkdir -p $HOME
 WORKDIR $HOME
@@ -26,7 +26,7 @@ RUN --mount=type=cache,target=/root/.m2 mvn -DskipTests -f $HOME/pom.xml clean p
 #
 # Package stage
 #
-FROM openjdk:17-jdk-slim
+FROM openjdk:25-jdk-slim
 ENV HOME=/usr/app
 COPY --from=build $HOME/target/starter-*.jar /usr/local/lib/app.jar
 ARG JVM_OPTS

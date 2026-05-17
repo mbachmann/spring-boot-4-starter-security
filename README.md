@@ -1,6 +1,6 @@
-# Spring Boot 3.5.x + JPA + Auth JWT
+# Spring Boot 4.0.6 + Java 25 + JPA + Auth JWT
 
-- Backend:  https://github.com/mbachmann/spring-boot-3-starter-security.git
+- Backend:  https://github.com/mbachmann/spring-boot-4-starter-security.git
 - Frontend: https://github.com/mbachmann/angular-20-jwt-auth-starter-standalone.git
 - Frontend (deprecated): https://github.com/mbachmann/angular-17-jwt-auth-starter-no-standalone.git
 
@@ -25,8 +25,8 @@ Use a Mac, Linux, WSL2 or git bash console.
 <br/>
 
 ```
-git clone https://github.com/mbachmann/spring-boot-3-starter-security
-cd spring-boot-3-starter-security
+git clone https://github.com/mbachmann/spring-boot-4-starter-security
+cd spring-boot-4-starter-security
 ./mvnw clean package
 java -jar target/starter-*.jar
 ```
@@ -42,25 +42,25 @@ Create first a jar with the build instruction. To create a container. Replace **
 For local platform
 
 ```
-$  docker build -t uportal/spring-boot-3-starter-security  .
+$  docker build -t uportal/spring-boot-4-starter-security  .
 ```
 
 Windows Intel and target platform
 
 ```
-$  docker buildx build --platform linux/amd64 -t uportal/spring-boot-3-starter-security -f Dockerfile .
+$  docker buildx build --platform linux/amd64 -t uportal/spring-boot-4-starter-security -f Dockerfile .
 ```
 
 For Mac or ARM Windows
 
 ```
-$  docker buildx build --platform linux/arm64 -t uportal/spring-boot-3-starter-security -f Dockerfile .
+$  docker buildx build --platform linux/arm64 -t uportal/spring-boot-4-starter-security -f Dockerfile .
 ```
 
 Run the image
 
 ```
-$  docker run -p 8080:8080 --rm -it  -e ACTIVE_PROFILES=dev,h2 uportal/spring-boot-3-starter-security
+$  docker run -p 8080:8080 --rm -it  -e ACTIVE_PROFILES=dev,h2 uportal/spring-boot-4-starter-security
 ```
 
 
@@ -77,7 +77,7 @@ Replace **uportal** with your **dockerhub id**.
 ```
 $  docker login
 $  docker login --username uportal --password 
-$  docker push uportal/spring-boot-3-starter-security
+$  docker push uportal/spring-boot-4-starter-security
 ```
 <br/>
 
@@ -97,7 +97,7 @@ Replace **uportal** with your **dockerhub id**.
 <br/>
 
 ```
-$  docker pull uportal/spring-boot-3-starter-security 
+$  docker pull uportal/spring-boot-4-starter-security 
 ```
 
 <br/>

@@ -2,8 +2,8 @@ version: '2'
 
 services:
 
-  spring-boot-3-starter-security-h2:
-    image: uportal/spring-boot-3-starter-security:latest
+  spring-boot-4-starter-security-h2:
+    image: uportal/spring-boot-4-starter-security:latest
 
     restart: unless-stopped
     environment:
